@@ -47,23 +47,65 @@
 //   let sonuc = sayi * sayi * sayi;
 //   let kareSonuc = kareAl(sonuc);
 //   console.log(kareSonuc); //return yazdığımızda buraya kup() = sonuc gibi oluyor. kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak. sonuc parentez içi yazıldığından local scope oluyor. fonksiyon içinde console yazdırabilirdik ama her zaman çalışmasını istemeyebiliriz sadece istediğimiz zaman çalışması için console.log(deger) diyerek çağırırız. !!! returnden sonra yazolan kodlar çalışmaz.
+// // }
+
+// //?özet:return ---> 1) Bir değeri metodun dışına çıkarmak taşımak için kullanılır.
+// //?                 2) Bir metodu bitiren anahtar kelimedir.
+// // kup(9)
+// let metin = "Kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak.";
+// let harf = prompt("Bulmak istediğiniz harfi giriniz");
+
+// function bul(harf) {
+//   let toplam = 0;
+//   for (let i = 0; i < metin.length; i++) {
+//     if (metin.charAt(i) === harf) {
+//       toplam += 1;
+//     }
+//     return toplam;
+//   }
+
 // }
+// let hak = 1;
+// do {
+//   let sayi = Math.round(Math.random() * 100);
+//   console.log(sayi);
+  
+//   let tahmin = +prompt("Bir sayi tahmini yapınız");
+//   if (tahmin === sayi) {
+//     alert("Tahmininiz doğru!");
+//     console.log(sayi);
+//     break;
+//   } else if (tahmin < sayi) {
+//     alert("daha yüksek bir sayı giriniz");
+//   } else {
+//     alert("daha küçük bir sayı giriniz");
+//   }
 
-//?özet:return ---> 1) Bir değeri metodun dışına çıkarmak taşımak için kullanılır.
-//?                 2) Bir metodu bitiren anahtar kelimedir.
-// kup(9)
-let metin = "Kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak.";
-let harf = prompt("Bulmak istediğiniz harfi giriniz");
-
-
-function bul(harf) {
-  let toplam = 0;
-  for (let i = 0; i < metin.length; i++) {
-    if (metin.charAt(i) === harf) {
-      toplam += 1;
-    }
-    return toplam;
-  }
+//   hak++;
+// } while (hak <= 5);
+// if (hak > 5) {
+//   alert("Hakkınız kalmadı. Sayı: " + sayi);
+// }
+let sayi = Math.round(Math.random() * 100);
+let hak = 1;
+do {
  
-}
+  console.log(sayi);
 
+  let tahmin = +prompt("Bir sayi tahmini yapınız");
+  if (tahmin === sayi) {
+    alert("Tahmininiz doğru!");
+    console.log(sayi);
+    break;
+  } else if (tahmin < sayi) {
+    alert("Daha yüksek bir sayı giriniz");
+  } else {
+    alert("Daha küçük bir sayı giriniz");
+  }
+
+  hak++;
+} while (hak <= 5);
+
+if (hak > 5) {
+  alert("Hakkınız kalmadı.");
+}
