@@ -109,3 +109,25 @@ do {
 if (hak > 5) {
   alert("Hakkınız kalmadı.");
 }
+let hak = 1;
+do {
+  let sayi = Math.round(Math.random() * 100);
+  console.log(sayi);
+
+  let tahmin = +prompt("Bir sayi tahmini yapınız");
+  if (tahmin === sayi) {
+    alert("Tahmininiz doğru!");
+    console.log(sayi);
+    break;
+  } else if (tahmin < sayi) {
+    alert("Daha yüksek bir sayı giriniz");
+  } else {
+    alert("Daha küçük bir sayı giriniz");
+  }
+
+  hak++;
+} while (hak <= 5);
+
+if (hak > 5) {
+  alert("Hakkınız kalmadı.");
+}
