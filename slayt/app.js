@@ -42,22 +42,22 @@
 // }
 // alanHesapla(2);
 
-// let yasHesapla = (dogumTarihi)=>{
-//     let yas = 2024-dogumTarihi
-//     console.log(yas);
-// }
-// yasHesapla(1966)
+let yasHesapla = (dogumTarihi)=>{
+    let yas = 2024-dogumTarihi
+    console.log(yas);
+}
+yasHesapla(1966)
 
-// let alanUcgen = (taban,yukseklik) => {
-//     // let taban =+prompt("Taban değerini giriniz:");
-//     // let yukseklik =+prompt("Yükseklik değerini giriniz:");
-//     let alan = taban*yukseklik/2
-//     // console.log(alan);
-//     return alan
+let alanUcgen = (taban,yukseklik) => {
+    let taban =+prompt("Taban değerini giriniz:");
+    let yukseklik =+prompt("Yükseklik değerini giriniz:");
+    let alan = taban*yukseklik/2
+    console.log(alan);
+    return alan
 
-// }
-// console.log(alanUcgen(4,3));
-// console.log(alanUcgen(23,62));
+}
+console.log(alanUcgen(4,3));
+console.log(alanUcgen(23,62));
 
 let kareAl = (sayi) => {
   let sonuc = sayi ** 2;
