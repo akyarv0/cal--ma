@@ -1,22 +1,33 @@
-// ///!------------PARAMETRESİZ FUNCTİON--------//
-// function yazdir() {
-//   console.log("Veysel");
-// }
-// yazdir();
-// yazdir();
+///!------------PARAMETRESİZ FUNCTİON--------//
+//?1.örnek
+yazdir()
+yazdir()
+function yazdir() {
+  console.log("ERSİN");
+}
 
-// function topla() {
-//   console.log(8 + 9);
-// }
-// topla();
+
+
+function topla() {
+  console.log("hasan");
+}
+topla();
+
+
 
 // //!---------PARAMETRELİ FUNCTİON--------//
-// //fonksiyon isminden sonra gelen parantez içine parametreler yazılır.
-// function yazdir2(isim, soyisim) {
-//   console.log(isim + " " + soyisim);
-// }
-// yazdir2("veysel", "akyar"); // burda parantez içine yazdığımmız her şeyi console yazdırır.
-// yazdir2("hasan", "ali");
+ //fonksiyon isminden sonra gelen parantez içine parametreler yazılır.
+//?2.Örnek
+yazdir2("Ersin","Ünal")
+function yazdir2(isim, soyisim) {
+  console.log(isim + " " + soyisim);
+}
+yazdir2("veysel", "akyar"); // burda parantez içine yazdığımmız her şeyi console yazdırır.
+yazdir2("hasan", "ali");
+
+
+
+//?3.Örnek
 
 // cube(2); //function tanımlandıktan sonra yukarda da çağırsak aşağıda çağırsak aynı şekilde çalışır. çünkü hoisted olayı bu!!!!
 
@@ -24,6 +35,9 @@
 //   console.log(sayi * sayi * sayi);
 // }
 // cube(8);
+
+
+//?4.Örnek
 
 // let yas = Number(prompt("Yaşınızı giriniz: "));
 // kontrolEt(yas);
@@ -38,23 +52,29 @@
 
 //!---------CALL BACK FUNTİON-------//
 
-function kareAl(sayi) {
-  let sonuc = sayi * sayi;
-  return sonuc;
-}
+// function kareAl(sayi) {
+//   let sonuc = sayi * sayi;
+//   return sonuc;
+// }
 
-function kup(sayi) {
-  let sonuc = sayi * sayi * sayi;
-  let kareSonuc = kareAl(sonuc);
-  console.log(kareSonuc); //return yazdığımızda buraya kup() = sonuc gibi oluyor. kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak. sonuc parentez içi yazıldığından local scope oluyor. fonksiyon içinde console yazdırabilirdik ama her zaman çalışmasını istemeyebiliriz sadece istediğimiz zaman çalışması için console.log(deger) diyerek çağırırız. !!! returnden sonra yazolan kodlar çalışmaz.
- }
+// function kup(sayi) {
+//   let sonuc = sayi * sayi * sayi;
+//   let kareSonuc = kareAl(sonuc);
+//   console.log(kareSonuc); //return yazdığımızda buraya kup() = sonuc gibi oluyor. kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak. sonuc parentez içi yazıldığından local scope oluyor. fonksiyon içinde console yazdırabilirdik ama her zaman çalışmasını istemeyebiliriz sadece istediğimiz zaman çalışması için console.log(deger) diyerek çağırırız. !!! returnden sonra yazolan kodlar çalışmaz.
+//  }
 
-console.log(kareAl(2));
- kup(2)
+// console.log(kareAl(2));
+//  kup(2)
 
 // //?özet:return ---> 1) Bir değeri metodun dışına çıkarmak taşımak için kullanılır.
 // //?                 2) Bir metodu bitiren anahtar kelimedir.
-// // kup(9)
+// kup(9)
+
+
+
+//?5.Örnek
+
+
 // let metin = "Kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak.";
 // let harf = prompt("Bulmak istediğiniz harfi giriniz");
 
@@ -68,6 +88,18 @@ console.log(kareAl(2));
 //   }
 
 // }
+
+
+
+
+
+
+
+
+
+//!___________________________________________//
+
+//_______________________________//
 // let hak = 1;
 // do {
 //   let sayi = Math.round(Math.random() * 100);

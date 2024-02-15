@@ -59,11 +59,11 @@
 // console.log(alanUcgen(4,3));
 // console.log(alanUcgen(23,62));
 
-// let kareAl = (sayi) => {
-//   let sonuc = sayi ** 2;
-//   return sonuc;
-// };
-// console.log(kareAl(5));
+let kareAl = (sayi)=> {
+  let sonuc = sayi ** 2;
+  console.log(sonuc);
+};
+kareAl(5);
 
 // let leapYear = function (year) {
 //   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
@@ -77,6 +77,7 @@
 // leapYear(1900);
 // leapYear(2000);
 
+
 // let leapYear = function () {
 //   let girilenYear = +prompt("Yıl giriniz"); // Kullanıcıdan yıl bilgisini alın ve sayıya dönüştürün
 //   if ((girilenYear % 4 === 0 && girilenYear % 100 !== 0) || girilenYear % 400 === 0) {
@@ -85,7 +86,7 @@
 //     console.log(`Girdiğiniz ${girilenYear} artık yıl değildir.`); // Artık yıl değilse konsola yazdır
 //   }
 // };
-
+// leapYear()
 // leapYear(); // Fonksiyonu çağır
 
 // let leapYear = function () {
@@ -97,15 +98,15 @@
 //   }
 // };
 
-// // Call the function without arguments
-// leapYear();
+// // // Call the function without arguments
+// // leapYear();
 
-const maas = [40000, 50000, 20000, 30000, 25500];
+// // const maas = [40000, 50000, 20000, 30000, 25500];
 
-const azMaas = maas
-  .filter((m) => m < 40000)
-  .map((m) => m * 1.25)
-  .reduce((m, n) => m + n);
-console.log(azMaas);
+// // const azMaas = maas
+// //   .filter((m) => m < 40000)
+// //   .map((m) => m * 1.25)
+// //   .reduce((m, n) => m + n);
+// // console.log(azMaas);
 
 
