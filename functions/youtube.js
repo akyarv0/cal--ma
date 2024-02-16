@@ -175,16 +175,16 @@
 // };
 // console.log(usAl(sayi1, sayi2));
 
-let year = +prompt("yıl giriniz")
+// let year = +prompt("yıl giriniz")
 
-let artikYil = function(year){
-  if ( (year%4===0 && year%100!==0) || year%400===0){
-    console.log(`${year} artık yıldır.`);
-  }
-  else{ console.log(`${year} artık değildir.`);}
-}
+// let artikYil = function(year){
+//   if ( (year%4===0 && year%100!==0) || year%400===0){
+//     console.log(`${year} artık yıldır.`);
+//   }
+//   else{ console.log(`${year} artık değildir.`);}
+// }
 
-artikYil(year);
+// artikYil(year);
 
 
 
