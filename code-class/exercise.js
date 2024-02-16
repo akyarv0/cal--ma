@@ -77,8 +77,6 @@
 
 
 
-// 1. Soru: Bir kullanıcının adını ve soyadını alıp, bunları "Soyadı, Adı" formatında birleştirmek istiyorsunuz. Ancak, ad ve soyad başlangıçta küçük harflerle girilmiş olabilir. İlk harfleri büyük harf yaparak bu formatlamayı nasıl gerçekleştirirsiniz?
-// isimFormatla(ad, soyad); // "Yılmaz, Ahmet"
 
 
 function turkceKarakterleriCevir(input) {
