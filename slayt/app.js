@@ -64,7 +64,7 @@ let kareAl = (sayi)=> {
   console.log(sonuc);
 };
 kareAl(5);
-
+//! Expression Yöntemi 
 // let leapYear = function (year) {
 //   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 //     console.log(`Girdiğiniz ${year} artık yıldır`);
@@ -108,5 +108,6 @@ kareAl(5);
 // //   .map((m) => m * 1.25)
 // //   .reduce((m, n) => m + n);
 // // console.log(azMaas);
+
 
 

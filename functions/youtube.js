@@ -1,29 +1,31 @@
 ///!------------PARAMETRESİZ FUNCTİON--------//
-//?1.örnek
-yazdir()
-yazdir()
-function yazdir() {
-  console.log("ERSİN");
+// //?1.örnek
+// yazdir()
+// yazdir()
+// function yazdir() {
+//   console.log("ERSİN");
+// }
+
+
+
+function topla(sayi1,sayi2) {    //parametreli hali versiyonu
+  // let sayi1= +prompt("birinci sayıyı giriniz")
+  // let sayi2 = +prompt("ikinci sayıyı giriniz")
+  let sonuc= sayi1+sayi2
+  console.log(`${sayi1}+${sayi2}=${sonuc}`);
 }
 
 
 
-function topla() {
-  console.log("hasan");
-}
-topla();
-
-
-
-// //!---------PARAMETRELİ FUNCTİON--------//
+//!---------PARAMETRELİ FUNCTİON--------//
  //fonksiyon isminden sonra gelen parantez içine parametreler yazılır.
 //?2.Örnek
-yazdir2("Ersin","Ünal")
-function yazdir2(isim, soyisim) {
-  console.log(isim + " " + soyisim);
-}
-yazdir2("veysel", "akyar"); // burda parantez içine yazdığımmız her şeyi console yazdırır.
-yazdir2("hasan", "ali");
+// yazdir2("Ersin","Ünal")
+// function yazdir2(isim, soyisim) {
+//   console.log(isim + " " + soyisim);
+// }
+// yazdir2("veysel", "akyar"); // burda parantez içine yazdığımmız her şeyi console yazdırır.
+// yazdir2("hasan", "ali");
 
 
 
