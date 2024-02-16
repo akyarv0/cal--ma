@@ -6,19 +6,15 @@
 //   console.log("ERSİN");
 // }
 
-
-
-function topla(sayi1,sayi2) {    //parametreli hali versiyonu
-  // let sayi1= +prompt("birinci sayıyı giriniz")
-  // let sayi2 = +prompt("ikinci sayıyı giriniz")
-  let sonuc= sayi1+sayi2
-  console.log(`${sayi1}+${sayi2}=${sonuc}`);
-}
-
-
+// function topla(sayi1,sayi2) {    //parametreli hali versiyonu
+//   // let sayi1= +prompt("birinci sayıyı giriniz")
+//   // let sayi2 = +prompt("ikinci sayıyı giriniz")
+//   let sonuc= sayi1+sayi2
+//   console.log(`${sayi1}+${sayi2}=${sonuc}`);
+// }
 
 //!---------PARAMETRELİ FUNCTİON--------//
- //fonksiyon isminden sonra gelen parantez içine parametreler yazılır.
+//fonksiyon isminden sonra gelen parantez içine parametreler yazılır.
 //?2.Örnek
 // yazdir2("Ersin","Ünal")
 // function yazdir2(isim, soyisim) {
@@ -26,8 +22,6 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 // }
 // yazdir2("veysel", "akyar"); // burda parantez içine yazdığımmız her şeyi console yazdırır.
 // yazdir2("hasan", "ali");
-
-
 
 //?3.Örnek
 
@@ -37,7 +31,6 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 //   console.log(sayi * sayi * sayi);
 // }
 // cube(8);
-
 
 //?4.Örnek
 
@@ -72,10 +65,7 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 // //?                 2) Bir metodu bitiren anahtar kelimedir.
 // kup(9)
 
-
-
 //?5.Örnek
-
 
 // let metin = "Kup fonksiyonunu nerede tanımlarsak tanımlayalım artık sonuc değerini çağıracak.";
 // let harf = prompt("Bulmak istediğiniz harfi giriniz");
@@ -91,14 +81,6 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 
 // }
 
-
-
-
-
-
-
-
-
 //!___________________________________________//
 
 //_______________________________//
@@ -106,7 +88,7 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 // do {
 //   let sayi = Math.round(Math.random() * 100);
 //   console.log(sayi);
-  
+
 //   let tahmin = +prompt("Bir sayi tahmini yapınız");
 //   if (tahmin === sayi) {
 //     alert("Tahmininiz doğru!");
@@ -126,7 +108,7 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 // let sayi = Math.round(Math.random() * 100);
 // let hak = 1;
 // do {
- 
+
 //   console.log(sayi);
 
 //   let tahmin = +prompt("Bir sayi tahmini yapınız");
@@ -168,3 +150,44 @@ function topla(sayi1,sayi2) {    //parametreli hali versiyonu
 // if (hak > 5) {
 //   alert("Hakkınız kalmadı.");
 // }
+
+// let ucgenAlan = (taban, yukseklik) => {
+//   let sonuc = (taban * yukseklik) / 2;
+//   console.log(sonuc);
+// };
+
+// ucgenAlan(5, 5);
+
+// let num1= +prompt("1.sayıyı giriniz")
+
+// let kareAl = (num1)=>{
+//   sonuc= num1*num1;
+//   return sonuc
+// }
+// console.log(kareAl(num1));
+
+// let sayi1 = +prompt("bir sayı giriniz");
+// let sayi2 = +prompt("üssü giriniz");
+
+// let usAl = (sayi1, sayi2) => {
+//   let sonuc = Math.pow(sayi1, sayi2);
+//   return sonuc;
+// };
+// console.log(usAl(sayi1, sayi2));
+
+let year = +prompt("yıl giriniz")
+
+let artikYil = function(year){
+  if ( (year%4===0 && year%100!==0) || year%400===0){
+    console.log(`${year} artık yıldır.`);
+  }
+  else{ console.log(`${year} artık değildir.`);}
+}
+
+artikYil(year);
+
+
+
+
+
+
