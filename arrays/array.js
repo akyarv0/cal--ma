@@ -49,6 +49,8 @@ function filtreliUrunleriDoldur(urunler) {
 
 }
 
+
+
 function filtreliUrunleriYazdir(urunler) {
     urunler.forEach(function (urun) {
         console.log("----------------------------------------");
