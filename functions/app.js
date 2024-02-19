@@ -132,15 +132,15 @@
 //   }
 // }
 
-let hesapMakinesi = function(sayi1,sayi2,islem){
+// let hesapMakinesi = function(sayi1,sayi2,islem){
  
- if(islem==="topla"){
-  sonuc=sayi1+sayi2
- }
- return sonuc
+//  if(islem==="topla"){
+//   sonuc=sayi1+sayi2
+//  }
+//  return sonuc
  
   
 
-}
+// }
 
-console.log(hesapMakinesi(3,4,"topla"));
+// console.log(hesapMakinesi(3,4,"topla"));
