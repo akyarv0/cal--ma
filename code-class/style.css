@@ -1,0 +1,5 @@
+body {
+    display: grid;
+    width: 700px;
+    grid-template-columns: 100px 1fr 2fr;
+} 

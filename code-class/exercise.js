@@ -79,16 +79,16 @@
 
 
 
-function turkceKarakterleriCevir(input) {
-    const harfler = {
-        'ç': 'c', 'Ç': 'C', 'ğ': 'g', 'Ğ': 'G',
-        'ı': 'i', 'İ': 'I', 'ö': 'o', 'Ö': 'O',
-        'ş': 's', 'Ş': 'S', 'ü': 'u', 'Ü': 'U'
-    };
-    return input.replace(/[çÇğĞıİöÖşŞüÜ]/g, harf => harfler[harf]);
-}
+// function turkceKarakterleriCevir(input) {
+//     const harfler = {
+//         'ç': 'c', 'Ç': 'C', 'ğ': 'g', 'Ğ': 'G',
+//         'ı': 'i', 'İ': 'I', 'ö': 'o', 'Ö': 'O',
+//         'ş': 's', 'Ş': 'S', 'ü': 'u', 'Ü': 'U'
+//     };
+//     return input.replace(/[çÇğĞıİöÖşŞüÜ]/g, harf => harfler[harf]);
+// }
 
-// Fonksiyonu test etmek için örnek bir kullanım:
-let input = "Pijamalı hasta, yağız şoföre çabucak güvendi.";
-let output = turkceKarakterleriCevir(input);
-console.log(output); // "Pijamali hasta, yagiz sofore cabucak guvendi."
+// // Fonksiyonu test etmek için örnek bir kullanım:
+// let input = "Pijamalı hasta, yağız şoföre çabucak güvendi.";
+// let output = turkceKarakterleriCevir(input);
+// console.log(output); // "Pijamali hasta, yagiz sofore cabucak guvendi."
