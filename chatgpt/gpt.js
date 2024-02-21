@@ -71,8 +71,18 @@ const matrix = [
 ];
 // Soru: 'matrix' array'indeki her alt dizinin bütün elemanları tek sayı mı kontrol edin. Ardından, tek sayı olan her elemanı iki katına çıkararak yeni bir matrix oluşturun.
 
-const oddDouble = matrix.map((m)=> m%2==1)
-console.log(oddDouble);
+
+
+// const result = matrix.every(subArray => subArray.every(num => num % 2 === 1)) 
+//             ? matrix.map(subArray => subArray.map(num => num * 2))
+//             : 'Not all elements are odd';
+
+// console.log(result);
+
+
+
+
+
 
 
 
