@@ -34,7 +34,7 @@ console.log(mainAfter);
 const sectionAfter = document.getElementsByTagName("section");
 console.log(sectionAfter);
 sectionAfter[0].style.cssText =
-  "border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px; display: flex; flex-direction: row; gap: 10px; box-shadow: 0 0 10px fuchsia;";
+  "paddding-right: 10px; margin: 10px; border-radius: 10px; display: flex; flex-direction: row; gap: 10px; ";
 
 const inputUsername = document.getElementById("username");
 console.log(inputUsername);
@@ -45,13 +45,13 @@ inputPassword.placeholder = "Password";
 
 const btnAfter = document.getElementsByClassName("btn");
 console.log(btnAfter);
-btnAfter[0].style.cssText = "background-color: green; color: black; padding: 10px; border: 1px solid black; border-radius: 5px; cursor: pointer; opacity: 0.8;width: 5rem; height: 3rem; white-space: nowrap ; margin: auto; box-shadow: 0 0 10px fuchsia; ";
+btnAfter[0].style.cssText = "background-color: green; color: white; padding: 10px; border: 1px solid black; border-radius: 5px; cursor: pointer; opacity: 0.8;width: 5rem; height: 3rem; white-space: nowrap ; margin: auto; box-shadow: 0 0 10px fuchsia; ";
 btnAfter[0].innerText = "Giris Yap";
 
 const inputTag = document.getElementsByTagName("input");
 console.log(inputTag);
-inputTag[0].style.cssText = "width: 10rem; height: 2rem; margin:auto;";
-inputTag[1].style.cssText = "width: 10rem; height: 2rem; margin:auto;";
+inputTag[0].style.cssText = "width: 10rem; height: 1.5rem; margin:auto;";
+inputTag[1].style.cssText = "width: 10rem; height: 1.5rem; margin:auto;";
 
 //----------PROJECT----------//
 const projects = document.getElementById("projects");
