@@ -45,7 +45,8 @@ inputPassword.placeholder = "Password";
 
 const btnAfter = document.getElementsByClassName("btn");
 console.log(btnAfter);
-btnAfter[0].style.cssText = "background-color: green; color: white; padding: 10px; border: 1px solid black; border-radius: 5px; cursor: pointer; opacity: 0.8;width: 5rem; height: 3rem; white-space: nowrap ; margin: auto; box-shadow: 0 0 10px fuchsia; ";
+btnAfter[0].style.cssText =
+  "background-color: green; color: white; padding: 10px; border: 1px solid black; border-radius: 5px; cursor: pointer; opacity: 0.8;width: 5rem; height: 3rem; white-space: nowrap ; margin: auto; box-shadow: 0 0 10px fuchsia; ";
 btnAfter[0].innerText = "Giris Yap";
 
 const inputTag = document.getElementsByTagName("input");
@@ -53,31 +54,28 @@ console.log(inputTag);
 inputTag[0].style.cssText = "width: 10rem; height: 1.5rem; margin:auto;";
 inputTag[1].style.cssText = "width: 10rem; height: 1.5rem; margin:auto;";
 
+
+
 //----------PROJECT----------//
-const projects = document.getElementById("projects");
-console.log(projects);
-projects.innerText = "JS DOM Projects";
-
-const h3After = document.getElementsByTagName("h3");
-console.log(h3After);
-h3After[0].style.cssText = "text-align: center;";
 
 
 
-const ulMain = document.querySelector("#projects ul"); // "projects" id'li elementin içindeki "ul" elementini seçiyoruz
 
-for (let i = 1; i <= 5; i++) {
-  const newLi = document.createElement("li"); // Yeni bir "li" elementi oluşturuyoruz
-  const textNode = document.createTextNode("Proje " + i); // Yeni liste öğesinin metnini oluşturuyoruz
-  newLi.appendChild(textNode); // Yeni "li" elementinin içeriğine metni ekliyoruz
-  ulMain.appendChild(newLi); // "ulMain" elementinin içine yeni "li" elementini ekliyoruz
+
+const projectsAfter = document.getElementById("projects");
+projectsAfter.style.cssText = "text-align: left; margin: 0 auto; width: fit-content; line-height: 2rem; cursor: pointer; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;";
+projectsAfter.textContent = "JS Dom Projects";
+
+const myProjects = [
+  "Hello World!",
+  "Guess Number",
+  "Checkout Page",
+  "Gelir-Gider Projesi",
+  "Api Projects",
+];
+
+for (let i = 0; i < myProjects.length; i++) {
+  const eklenen = document.createElement("li");
+  eklenen.innerText = myProjects[i];
+  projectsAfter.appendChild(eklenen);
 }
-console.log(ulMain);
-
-
-
-
-
-
-
-
