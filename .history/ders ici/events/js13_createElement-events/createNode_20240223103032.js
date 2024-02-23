@@ -2,22 +2,24 @@ console.log("**** CREATE NODE ****");
 
 const newLi = document.createElement("li");
 
+
 const textLi = document.createTextNode("Go");
 newLi.appendChild(textLi);
 document.querySelector("ul").appendChild(newLi);
 
+
 console.log(newLi);
 
-const react = document.querySelector("ul li:nth-child(4)");
 
-react.before(newLi);
 
-newLi.className = "list";
-newLi.id = "new-li";
+const react =document.querySelector("ul li:nth-child(4)")
 
-const h2 = document.querySelector(".add-item>:nth-child(1)");
+react.before(newLi)
 
-console.log(h2);
+newLi.className= "list"
+newLi.id= "new-li";
+
+const h2 = document.querySelector(.)
 
 // //? 1- yeni bir li elementi olustur
 // const newLi = document.createElement("li")
