@@ -1,9 +1,9 @@
 //!kullanıcı bilgilerine Destructuring oluşturarak erişelim.
 
-const users = [
-    { id: 1, name: 'Alice', email: 'alice@example.com' },
-    { id: 2, name: 'Bob', email: 'bob@example.com' }
-];
+// const users = [
+//     { id: 1, name: 'Alice', email: 'alice@example.com' },
+//     { id: 2, name: 'Bob', email: 'bob@example.com' }
+// ];
 // console.log(users);
 // const [user1, user2] = users;
 // console.log(user1);
@@ -64,7 +64,7 @@ const users = [
 //   console.log(user1);
 //   console.log(user2);
 //   const { name: name1, email: email1,} = user1;
-//   console.log(name1);
+//   console.log([name1,email1]);
 //   console.log(email1);
  
 //   console.log(user1.language);
@@ -87,46 +87,72 @@ const users = [
   
 
 
-//   //! Destructuring kullanarak en sık tekrar eden özelliği(rengi) bulan bir fonksiyon yazın sonuc red olmalı
+  //! Destructuring kullanarak en sık tekrar eden özelliği(rengi) bulan bir fonksiyon yazın sonuc red olmalı
 
-const data = [
-    { id: 1, color: 'red' },
-    { id: 2, color: 'blue' },
-    { id: 3, color: 'green' },
-    { id: 4, color: 'red' },
-    { id: 5, color: 'red' },
-    { id: 6, color: 'blue' }
-  ];
-const colorCounts = data.reduce((acc, { color }) => {
-    acc[color] = (acc[color] || 0) + 1;
-    return acc;
-  }, {});
+// const data = [
+//     { id: 1, color: 'red' },
+//     { id: 2, color: 'blue' },
+//     { id: 3, color: 'green' },
+//     { id: 4, color: 'red' },
+//     { id: 5, color: 'red' },
+//     { id: 6, color: 'blue' }
+//   ];
+// const colorCounts = data.reduce((acc, { color }) => {
+//     acc[color] = (acc[color] || 0) + 1;
+//     return acc;
+//   }, {});
 
-console.log(colorCounts);;
+// console.log(colorCounts);;
 
 //   //! Destructuring kullanarak nesnelerin içindeki dizi özelliğini birleştiren bir fonksiyon yazın sonuc [1, 2, 3, 4, 5, 6, 7, 8, 9] olmalı
+const data = [
+    { id: 1, values: [1, 2, 3] },
+    { id: 2, values: [4, 5] },
+    { id: 3, values: [6, 7, 8, 9] }
+  ];
 // const data = [
-//     { id: 1, values: [1, 2, 3] },
-//     { id: 2, values: [4, 5] },
-//     { id: 3, values: [6, 7, 8, 9] }
-//   ];
+//   { id: 1, values: [1, 2, 3] },
+//   { id: 2, values: [4, 5] },
+//   { id: 3, values: [6, 7, 8, 9] }
+// ];
 
 
+//   // Object.assign ve spread operatörü ile diziyi birleştir
+  // const array = Object.assign([], ...data.map(({ values }) => values));
+
+  // console.log(array);
+
+    // Spread operatörü ile diziyi birleştir
+    const mergedArray = [].concat(...data.map(({ values }) => values));
+  console.log(mergedArray);
+
+  
+  const obj = {
+    arr1: [1, 2, 3,],
+    arr2: [4, 5, 6],
+    arr3: [7, 8, 9]
+};
+function xArrays(obj) {
+    return [...obj.arr1, ...obj.arr2, ...obj.arr3];
+}
+
+console.log(xArrays(obj))
 
 //   //! Spread operatörünü kullanarak iki nesnenin belirli özelliklerini birleştiren ve çakışan özelliklerin değerlerini toplayan bir fonksiyon yazın  {a: 10, b: 35, c: 55, d: 35} olmalı
 
-// const object1 = {
-//     a: 10,
-//     b: 20,
-//     c: 30
-//   };
+const object1 = {
+    a: 10,
+    b: 20,
+    c: 30
+  };
   
-//   const object2 = {
-//     b: 15,
-//     c: 25,
-//     d: 35
-//   };
+  const object2 = {
+    b: 15,
+    c: 25,
+    d: 35
+  };
+  
 
 
 
-//   //! Rest operatörünü kullanarak n tane dizi içindeki elemanların toplamını bulan bir fonksiyon yazın. rneğin fonksiyona [1, 2, 3], [4, 5, 6], [7, 8, 9] yazıldığında sonuç 45 olmalı
+// //   //! Rest operatörünü kullanarak n tane dizi içindeki elemanların toplamını bulan bir fonksiyon yazın. rneğin fonksiyona [1, 2, 3], [4, 5, 6], [7, 8, 9] yazıldığında sonuç 45 olmalı
