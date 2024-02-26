@@ -21,10 +21,10 @@ const values = Object.values(myObject2);
 // Cevap: Object.assign() methodu, bir veya daha fazla kaynak nesnesini hedef nesneye birleştirir. Bu, nesneler arasında özelliklerin kopyalanmasını sağlar. Örneğin:
 
 
-const target = { a: 1, b: 2 };
-const source = { b: 3, c: 4 };
-const result = Object.assign(target, source);
-// result: { a: 1, b: 3, c: 4 }
+// const target = { a: 1, b: 2 };
+// const source = { b: 3, c: 4 };
+// const result = Object.assign(target, source);
+// // result: { a: 1, b: 3, c: 4 }
 
 
 // Soru: Object.hasOwnProperty() methodu ne işe yarar?
@@ -45,6 +45,7 @@ console.log(myObject3.hasOwnProperty('gender')); // false
 
 const myObject4 = { name: 'John', age: 25, city: 'New York' };
 const entries = Object.entries(myObject4);
+console.log(entries);
 // entries: [['name', 'John'], ['age', 25], ['city', 'New York']]
 
 // Soru: Object.create() methodu nasıl kullanılır?
@@ -58,6 +59,7 @@ const person = {
 };
 
 const newPerson = Object.create(person);
+console.log(newPerson);
 
 
 // Soru: Object.entries() ve forEach ile nesne özelliklerini döngü içinde nasıl kullanabilirsiniz?

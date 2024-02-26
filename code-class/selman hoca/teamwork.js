@@ -1,11 +1,17 @@
 // "Sıralı bir dizi içinde (örneğin, bir dizi içinde) tekrar eden sayıları bulun ve bu tekrar eden sayıların her biri için kaç kere tekrar ettiğini hesaplayın. Sonuçları bir obje olarak döndürün."
 
 const arr1 = [12, 15, 2, 4, 12, 2, 7, 8, 4];
+
+
 const tekrar = arr1.reduce((acc, number) => {
   acc[number] = (acc[number] || 0) + 1;
+  console.log([number]);
   return acc
 }, {});
 console.log(tekrar);
+
+
+
 // const tekrar = arr1.filter(
 //   (item, index, array) => array.indexOf(item) !== index
 // );
@@ -29,6 +35,11 @@ console.log(sayilar);
 // "Verilen bir dizideki her bir kelimenin uzunluğunu hesaplayarak bu uzunlukları içeren yeni bir dizi oluşturun." Örneğin ["merhaba", "dünya", "javascript"] sonucu [7, 5, 10] olamlı
 
 const words = ["merhaba", "dünya", "javascript"];
+
+const kelimeU = words.map((m)=> m.length)
+console.log(kelimeU);//map ile daha güzel
+
+
 const lenghts = [];
 for (let i in words) {
   lenghts.push(words[i].length);
@@ -38,13 +49,26 @@ console.log(lenghts);
 // ipucu --->const wordsNum = words[0].length // 7
 
 // "Verilen bir dizideki pozitif çift sayıların karelerini alarak bu sayıları sıralı bir şekilde büyükten küçüğe doğru listeleyin."
-
 const arr2 = [12, 15, 2, 4, 12, 2, 7, 8, 4];
+
+const kareAl1 = arr2.filter((m)=> m%2===0).map((m)=>m**2).sort((a,b) =>b-a)
+console.log(kareAl1);
+
+
+
+
+
+
+
+
 
 const karesi= arr2.filter(number=> number>0 && number%2===0)
 .map(number=> number**2).sort((a,b)=> b-a)
 
 console.log(karesi);
+
+
+
 
 const arr2Evens = [];
 for (let i of arr2) {

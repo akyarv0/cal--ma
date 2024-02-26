@@ -51,6 +51,16 @@
 // let dizi1 = [1, 2, 3, 4, 5];
 // let dizi2 = [3, 4, 5, 6, 7];
 
+let dizi1 = [1, 2, 3, 4, 5];
+let dizi2 = [3, 4, 5, 6, 7];
+
+// dizi1'in elemanları üzerinde filtreleme yaparak ortak elemanları bul
+let ortakElemanlar = dizi1.filter(eleman => dizi2.includes(eleman));
+
+console.log(ortakElemanlar); // [3, 4, 5]
+
+
+
 // 4. Soru: Soru: Bir dizideki sayıların karelerinden çift sayıların iki katlarının toplamını bulun.
 // input : [1, 2, 3, 4, 5]
 // output : 28

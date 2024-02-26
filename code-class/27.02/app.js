@@ -1,5 +1,31 @@
 //! Bir restoranın menüsünü temsil eden bir JavaScript nesnesi oluşturun. Bu nesne, menüdeki yemeklerin adlarını özellikler olarak içermelidir. Ayrıca, her yemeğin fiyatını döndüren bir metodu da içermelidir. Oluşturduğunuz bu nesneyi kullanarak, menüdeki bir yemeğin adını almak ve fiyatını öğrenmek için nasıl bir JavaScript kodu yazarsınız?
 
+const restoranMenusu = {
+  pizza: {
+    fiyat: 20
+  },
+  hamburger: {
+    fiyat: 15
+  },
+  salata: {
+    fiyat: 12
+  },
+  // Yemeğin fiyatını döndüren metod
+  getYemekFiyati: function(yemekAdi) {
+    if (this[yemekAdi]) {
+      return `${yemekAdi} fiyatı: ${this[yemekAdi].fiyat} TL`;
+    }
+    return `Üzgünüz, ${yemekAdi} menüde bulunmamaktadır.`;
+  }
+};
+
+// Menüdeki bir yemeğin adını alıp fiyatını öğrenme
+const yemekAdi = 'pizza';
+const fiyatBilgisi = restoranMenusu.getYemekFiyati(yemekAdi);
+console.log(fiyatBilgisi); // "pizza fiyatı: 20 TL"
+
+
+
 
 
 
@@ -34,8 +60,12 @@ var calisanlar = [
     { ad: "Mehmet", departman: "Satış", maas: 5500 },
     { ad: "Ahmet", departman: "İnsan Kaynakları", maas: 5000 }
   ];
+
+
+
   
   function departmanMaasOrtalamasi(departman) {
+    
     // Kodunuzu buraya yazın
   }
   
