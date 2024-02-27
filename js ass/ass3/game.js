@@ -28,6 +28,11 @@ document.querySelector(".check").addEventListener("click", () => {
         document.querySelector(".number").textContent = rastgeleSayi;
 
         // top-score Kontrolü yap 
+
+        if (skor > enYuksekSkor ) {
+            enYuksekSkor = skor
+            document.querySelector(".top-score").textContent = skor
+        }
     //!Tahmin Yanlışsa    
     }else{
         //? Skor 1'den büyük olduğu sürece hakkım var
@@ -51,7 +56,7 @@ document.querySelector(".check").addEventListener("click", () => {
 
 } )
 
-//Again butonuna basınca ayarlar başlangıç değerlerine kurulsun. Aka plan #2d3436 olsun
+//?Again butonuna basınca ayarlar başlangıç değerlerine kurulsun. Aka plan #2d3436 olsun
 
 document.querySelector(".again").onclick = () => {
 
@@ -72,10 +77,17 @@ document.querySelector(".again").onclick = () => {
 
 }
 
-//! Enter tusuna bastıgınızda
-document.querySelector(".guess").addEventListener("keydown", function (e) {
-    if (e.key == "Enter") {
-        document.querySelector(".check").click();   
-    }
 
-})
+//! ENTER tuşu çalışsın!
+
+//Klavyeden enter butonuna basıldığında check butonunu tetikle
+
+document.addEventListener("keydown", function(e){
+    // console.log(e)
+
+    if (e.key === "Enter") {
+        document.querySelector(".check").click()
+    }
+} )
+
+

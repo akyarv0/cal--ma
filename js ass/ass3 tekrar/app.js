@@ -9,6 +9,7 @@ let enYuksekSkor = 0;
 document.querySelector(".check").addEventListener("click", () => {
   const tahmin = document.querySelector(".guess").value;
   console.log(tahmin);
+  document.querySelector(".guess").value = "";
 
   if (!tahmin) {
     mesaj.textContent = "Lütfen bir sayı giriniz";
@@ -16,6 +17,13 @@ document.querySelector(".check").addEventListener("click", () => {
     mesaj.textContent = "Tahmininiz doğru.Tebrikler";
     document.querySelector("body").style.backgroundColor = "green";
     document.querySelector(".number").textContent = rastgeleSayi;
+
+    if(skor> enYuksekSkor){
+      enYuksekSkor=skor
+      document.querySelector(".top-score").textContent=skor
+    }
+  
+
   } else {
     if (skor > 1) {
       skor--;
@@ -41,17 +49,27 @@ document.querySelector(".again").onclick = () => {
   document.querySelector(".number").textContent = "?";
 
   document.querySelector(".guess").value = "";
-  mesaj.textContent="Oyun yeniden başlıyor..."
+  mesaj.textContent = "Oyun yeniden başlıyor...";
 };
+//!enter tuşu çalışsın
 
-document.addEventListener("keydown", function(e){
-    console.log(e);
-    if(e.key ==="Enter"){
-        document.querySelector(".check").click()
-        document.querySelector(".guess").value = "";
-    }
-    else{
-        
-    }
+document.addEventListener("keydown", function (e) {
+  console.log(e);
+  if (e.key === "Enter") {
+    document.querySelector(".check").click();
+    document.querySelector(".guess").value = "";
+  } else {
+  }
+});
 
+
+
+document.addEventListener("keydown", (e)=> {
+  if (e.key==="Enter"){
+    document.querySelector(".check").click()
+  }
+  
 })
+
+
+document.querySelector(".top-score-label")
