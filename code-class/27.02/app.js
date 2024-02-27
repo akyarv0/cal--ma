@@ -9,23 +9,26 @@ const restoranMenusu = {
   },
   salata: {
     fiyat: 12
-  },
-  // Yemeğin fiyatını döndüren metod
-  getYemekFiyati: function(yemekAdi) {
-    if (this[yemekAdi]) {
-      return `${yemekAdi} fiyatı: ${this[yemekAdi].fiyat} TL`;
-    }
-    return `Üzgünüz, ${yemekAdi} menüde bulunmamaktadır.`;
   }
 };
+function yemekFiyati(yemekAdi) {
+  if (restoranMenusu[yemekAdi]) {
+    return `${yemekAdi} fiyatı: ${restoranMenusu[yemekAdi].fiyat} TL`;
+  }
+  return `Üzgünüz, ${yemekAdi} menüde bulunmamaktadır.`;
+}
 
-// Menüdeki bir yemeğin adını alıp fiyatını öğrenme
-const yemekAdi = 'pizza';
-const fiyatBilgisi = restoranMenusu.getYemekFiyati(yemekAdi);
-console.log(fiyatBilgisi); // "pizza fiyatı: 20 TL"
+// const yemekAdi = 'pizza';
+const yemekAdi = "pilav"
+
+const fiyatBilgisi = yemekFiyati(yemekAdi);
+console.log(fiyatBilgisi); 
 
 
 
+Object.keys(restoranMenusu).forEach((yemekAdi) => {
+  console.log(`${yemekAdi} fiyatı: ${restoranMenusu[yemekAdi].fiyat} TL`);
+});
 
 
 
@@ -62,73 +65,19 @@ var calisanlar = [
   ];
 
 
-var calisanlar = [
-    { ad: "Ali", departman: "Muhasebe", maas: 4000 },
-    { ad: "Ayşe", departman: "İnsan Kaynakları", maas: 6000 },
-    { ad: "Fatma", departman: "Muhasebe", maas: 4500 },
-    { ad: "Mehmet", departman: "Satış", maas: 5500 },
-    { ad: "Ahmet", departman: "İnsan Kaynakları", maas: 5000 }
-];
-
-function maasOrtalamasiHesapla(departman) {
-    // Belirtilen departmandaki çalışanları filtrele
-    const departmandakiCalisanlar = calisanlar.filter(calisan => calisan.departman === departman);
-
-    // Eğer departmanda çalışan yoksa mesaj döndür
-    if (departmandakiCalisanlar.length === 0) {
-        return "Belirtilen departmanda çalışan bulunamadı!";
-    }
-
-    // Maaşların toplamını hesapla
-    const toplamMaas = departmandakiCalisanlar.reduce((toplam, calisan) => toplam + calisan.maas, 0);
-
-    // Maaş ortalamasını hesapla
-    const maasOrtalamasi = toplamMaas / departmandakiCalisanlar.length;
-
-    // Ortalamayı döndür
-    return maasOrtalamasi;
-}
-
-console.log(maasOrtalamasiHesapla("Muhasebe"));
-
-// Örneğin, Muhasebe departmanının maaş ortalaması
-console.log("Muhasebe Maaş Ortalaması:", maasOrtalamasiHesapla("Muhasebe"));
-  
   function departmanMaasOrtalamasi(departman) {
-
-    // Kodunuzu buraya yazın
+    const departmandakiCalisanlar = calisanlar.filter(calisan => calisan.departman === departman);
+    if (departmandakiCalisanlar.length === 0) {
+      return "Belirtilen departmanda çalışan bulunamadı!";
+    }
+    const toplamMaas = departmandakiCalisanlar.reduce((toplam, calisan) => toplam + calisan.maas, 0);
+    const maasOrtalamasi = toplamMaas / departmandakiCalisanlar.length;
+    return maasOrtalamasi;
   }
   
-  // Örnek kullanım:
   console.log(departmanMaasOrtalamasi("Muhasebe")); // Beklenen çıktı: 4250
   console.log(departmanMaasOrtalamasi("Satış")); // Beklenen çıktı: 5500
   console.log(departmanMaasOrtalamasi("Bilgi Teknolojileri")); // Beklenen çıktı: Belirtilen departmanda çalışan bulunamadı!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
 
 
 
