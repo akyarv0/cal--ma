@@ -62,10 +62,40 @@ var calisanlar = [
   ];
 
 
+var calisanlar = [
+    { ad: "Ali", departman: "Muhasebe", maas: 4000 },
+    { ad: "Ayşe", departman: "İnsan Kaynakları", maas: 6000 },
+    { ad: "Fatma", departman: "Muhasebe", maas: 4500 },
+    { ad: "Mehmet", departman: "Satış", maas: 5500 },
+    { ad: "Ahmet", departman: "İnsan Kaynakları", maas: 5000 }
+];
 
+function maasOrtalamasiHesapla(departman) {
+    // Belirtilen departmandaki çalışanları filtrele
+    const departmandakiCalisanlar = calisanlar.filter(calisan => calisan.departman === departman);
+
+    // Eğer departmanda çalışan yoksa mesaj döndür
+    if (departmandakiCalisanlar.length === 0) {
+        return "Belirtilen departmanda çalışan bulunamadı!";
+    }
+
+    // Maaşların toplamını hesapla
+    const toplamMaas = departmandakiCalisanlar.reduce((toplam, calisan) => toplam + calisan.maas, 0);
+
+    // Maaş ortalamasını hesapla
+    const maasOrtalamasi = toplamMaas / departmandakiCalisanlar.length;
+
+    // Ortalamayı döndür
+    return maasOrtalamasi;
+}
+
+console.log(maasOrtalamasiHesapla("Muhasebe"));
+
+// Örneğin, Muhasebe departmanının maaş ortalaması
+console.log("Muhasebe Maaş Ortalaması:", maasOrtalamasiHesapla("Muhasebe"));
   
   function departmanMaasOrtalamasi(departman) {
-    
+
     // Kodunuzu buraya yazın
   }
   
