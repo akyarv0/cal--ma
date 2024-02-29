@@ -1,11 +1,11 @@
 // "Sıralı bir dizi içinde (örneğin, bir dizi içinde) tekrar eden sayıları bulun ve bu tekrar eden sayıların her biri için kaç kere tekrar ettiğini hesaplayın. Sonuçları bir obje olarak döndürün."
 
-const arr1 = [12, 15, 2, 4, 12, 2, 7, 8, 4];
+const arr12 = [12, 15, 2, 4, 12, 2, 7, 8, 4];
 
 
-const tekrar = arr1.reduce((acc, number) => {
+const tekrar = arr12.reduce((acc, number) => {
   acc[number] = (acc[number] || 0) + 1;
-  console.log([number]);
+  // console.log([number]);
   return acc
 }, {});
 console.log(tekrar);
@@ -33,13 +33,13 @@ console.log(sayilar);
 // console.log(n);
 
 // "Verilen bir dizideki her bir kelimenin uzunluğunu hesaplayarak bu uzunlukları içeren yeni bir dizi oluşturun." Örneğin ["merhaba", "dünya", "javascript"] sonucu [7, 5, 10] olamlı
-
+//? 1.Çözüm
 const words = ["merhaba", "dünya", "javascript"];
 
 const kelimeU = words.map((m)=> m.length)
 console.log(kelimeU);//map ile daha güzel
 
-
+//? 2.cözüm
 const lenghts = [];
 for (let i in words) {
   lenghts.push(words[i].length);
@@ -88,10 +88,12 @@ console.log(arr2Evens.sort((a, b) => b - a));
 //   .sort((a, b) => b - a);
 // console.log(result);
 
-// let myArr = [ "hello","world", "FS cohort 16!"]; myArr = myArr.map(item => item.toUpperCase());
-// let cohort = myArr[2];
-// cohort.toLowerCase();
-// console.log(cohort);
+let myArr = [ "hello","world", "FS cohort 16!"]; myArr = myArr.map(item => item.toUpperCase());
+let cohort = myArr[2];
+cohort.toLowerCase(); // işe yaramıyor sebebi heap-steack muhabbeti yüzünden
+console.log(cohort);
+
+
 
 const numbers = [15.5, 2.3, 1.1, 4.7];
 const toplam = numbers.reduce(
@@ -101,3 +103,43 @@ const toplam = numbers.reduce(
 console.log(toplam); // Output: 23.6
 
 
+
+
+const arr1 = [3, 5, 3, 4, 5];
+
+// reduce metodu bu dizinin her elemanı için aşağıdaki adımları takip eder:
+
+//? 1. Başlangıç Durumu:
+// Akümülatör (acc) başlangıçta boş bir obje {} olarak belirlenmiştir.
+// Dizi elemanları (number): [3, 5, 3, 4, 5]
+
+//? 2.İlk Eleman (3):
+// acc: {} (Başlangıçta boş)
+// İşlem: acc[3] = (acc[3] || 0) + 1 => acc[3] = 0 + 1
+// Sonuç: acc => {3: 1}
+
+//? 3. İkinci Eleman (5):
+// acc: {3: 1}
+// İşlem: acc[5] = (acc[5] || 0) + 1 => acc[5] = 0 + 1
+// Sonuç: acc => {3: 1, 5: 1}
+
+//? 4. Üçüncü Eleman (3):
+// acc: {3: 1, 5: 1}
+// İşlem: acc[3] = (acc[3] || 0) + 1 => acc[3] = 1 + 1
+// Sonuç: acc => {3: 2, 5: 1}
+
+//? 5. Dördüncü Eleman (4):
+// acc: {3: 2, 5: 1}
+// İşlem: acc[4] = (acc[4] || 0) + 1 => acc[4] = 0 + 1
+// Sonuç: acc => {3: 2, 5: 1, 4: 1}
+
+//? 6. Beşinci Eleman (5):
+// acc: {3: 2, 5: 1, 4: 1}
+// İşlem: acc[5] = (acc[5] || 0) + 1 => acc[5] = 1 + 1
+// Sonuç: acc => {3: 2, 5: 2, 4: 1}
+
+//? Son Durum:
+
+// acc => {3: 2, 5: 2, 4: 1}
+// console.log(tekrar); çıktısı: {3: 2, 5: 2, 4: 1}
+// Her adımda, acc objesi o anki elemanın frekansını günceller ve sonraki adıma geçer. İşlem tamamlandığında, acc objesi her sayının frekansını içeren bir tablo haline gelmiş olur.
